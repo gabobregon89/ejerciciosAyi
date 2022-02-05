@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CursosView"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="Cursos"
+    Entity="model.Cursos"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="Cursos"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Nombre"
+    PrecisionRule="true"
+    EntityAttrName="Nombre"
+    EntityUsage="Cursos"
+    AliasName="NOMBRE"/>
+  <ViewAttribute
+    Name="Duracion"
+    PrecisionRule="true"
+    EntityAttrName="Duracion"
+    EntityUsage="Cursos"
+    AliasName="DURACION"/>
+  <ViewLinkAccessor
+    Name="MateriasView"
+    ViewLink="model.MateriasFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

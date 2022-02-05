@@ -1,0 +1,25 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="model.AppModule">
+      <AppModuleConfig name="17EA26D1FB3" JDBCName="Escuelita" DeployPlatform="LOCAL" jbo.project="model.Model" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModuleLocal" ApplicationName="model.AppModule" DBconnection="java:comp/env/jdbc/EscuelitaDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/EscuelitaDS" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="model.AppModule"/>
+         <Tester FullProxyInterfaceName="model.common.AppModule"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="model.AppModule2">
+      <AppModuleConfig name="17EA26E115A" JDBCName="Escuelita" DeployPlatform="LOCAL" jbo.project="model.Model" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModule2Local" ApplicationName="model.AppModule2" DBconnection="java:comp/env/jdbc/EscuelitaDS">
+         <Database jbo.locking.mode="optimistic" jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/EscuelitaDS" jbo.SQLBuilder="Oracle"/>
+         <Security AppModuleJndiName="model.AppModule2"/>
+         <Tester FullProxyInterfaceName="model.common.AppModule2"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="17EA5CD54D5" DBconnection="java:comp/env/jdbc/EscuelitaDS" ApplicationName="model.AppModule2" DeployPlatform="LOCAL" IsLazyLoadingTrue="true" JDBCName="Escuelita" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" BC4JConfigName="AppModule2Local" jbo.project="model.Model">
+         <Database jbo.TypeMapEntries="OracleApps" jbo.SQLBuilder="Oracle" JDBCDataSource="java:comp/env/jdbc/EscuelitaDS"/>
+         <Security AppModuleJndiName="model.AppModule2"/>
+         <Tester FullProxyInterfaceName="model.common.AppModule2"/>
+         <Custom ns0:tester_classloader_enabled="true" ns0:_testers_credentials_needed="false" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

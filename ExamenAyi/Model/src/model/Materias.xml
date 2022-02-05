@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Materias"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MATERIAS"
+  AliasName="Materias"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    ColumnName="ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="MATERIAS"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Nombre"
+    Precision="255"
+    ColumnName="NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MATERIAS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Duracion"
+    ColumnName="DURACION"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="MATERIAS"/>
+  <Attribute
+    Name="CursoId"
+    IsNotNull="true"
+    ColumnName="CURSO_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="MATERIAS"/>
+  <AccessorAttribute
+    Name="Cursos"
+    Association="model.MateriasFk1Assoc"
+    AssociationEnd="model.MateriasFk1Assoc.Cursos"
+    AssociationOtherEnd="model.MateriasFk1Assoc.Materias"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="MateriasPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="MATERIAS_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Materias.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="MateriasFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="CURSOS_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="MATERIAS_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Materias.CursoId"/>
+    </AttrArray>
+  </Key>
+</Entity>
