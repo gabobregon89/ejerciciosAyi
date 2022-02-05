@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/placeholder"
+  Name="Categories"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true">
+  <ViewAttribute
+    Name="CategoryId"
+    Type="oracle.jbo.domain.Number"
+    PrimaryKey="true"/>
+  <ViewAttribute
+    Name="CategoryName"
+    Type="java.lang.String"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="CategoryId"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="Products"
+    ViewLink="model.prototype.DTLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <StaticList
+    Rows="3"
+    Columns="2"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      xmlns="http://xmlns.oracle.com/bc4j"
+      PropertiesFile="model.ModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

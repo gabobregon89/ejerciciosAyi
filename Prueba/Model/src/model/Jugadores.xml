@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Jugadores"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="JUGADORES"
+  AliasName="Jugadores"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="SocioAfa"
+    IsNotNull="true"
+    ColumnName="SOCIO_AFA"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="JUGADORES"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="CodigoClub"
+    ColumnName="CODIGO_CLUB"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="JUGADORES"/>
+  <Attribute
+    Name="Nombre"
+    Precision="50"
+    ColumnName="NOMBRE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JUGADORES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Puesto"
+    Precision="20"
+    ColumnName="PUESTO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="JUGADORES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Sueldo"
+    ColumnName="SUELDO"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="JUGADORES"/>
+  <AccessorAttribute
+    Name="Clubes"
+    Association="model.JugadoresFk1Assoc"
+    AssociationEnd="model.JugadoresFk1Assoc.Clubes"
+    AssociationOtherEnd="model.JugadoresFk1Assoc.Jugadores"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="JugadoresPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="JUGADORES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Jugadores.SocioAfa"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="JugadoresFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="CLUBES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="JUGADORES_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Jugadores.CodigoClub"/>
+    </AttrArray>
+  </Key>
+</Entity>

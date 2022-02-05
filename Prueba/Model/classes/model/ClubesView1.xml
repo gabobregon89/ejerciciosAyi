@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ClubesView1"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery><![CDATA[SELECT Clubes.CODIGO_CLUB,
+       Clubes.NOMBRE,
+       Clubes.DIRECCION,
+       Clubes.FECHA_FUNDACION
+FROM CLUBES Clubes]]></SQLQuery>
+  <ViewAttribute
+    Name="CodigoClub"
+    IsUpdateable="false"
+    IsPersistent="false"
+    IsNotNull="true"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="CODIGO_CLUB"
+    Expression="CODIGO_CLUB"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="Nombre"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="20"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="NOMBRE"
+    Expression="NOMBRE"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Direccion"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="50"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DIRECCION"
+    Expression="DIRECCION"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FechaFundacion"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.sql.Timestamp"
+    ColumnType="DATE"
+    AliasName="FECHA_FUNDACION"
+    Expression="FECHA_FUNDACION"
+    SQLType="DATE"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="CodigoClub"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="JugadoresView1"
+    ViewLink="model.JugadoresFk1Link1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>
