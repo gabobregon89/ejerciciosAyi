@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://localhost:7101/WebService-Annotation-context-root/MyCompanyPort?WSDL#%7Bhttp%3A%2F%2Fannotation%2F%7DMyCompanyWS"
+          uri="../annotation/MyCompanyWS.wsdl"/>
+</catalog>

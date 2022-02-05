@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://annotation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://annotation/" name="MyCompanyWS">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://annotation/" schemaLocation="MyCompanyPort1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="addEmployeeToDept">
+    <part name="parameters" element="tns:addEmployeeToDept"/>
+  </message>
+  <message name="addEmployeeToDeptResponse">
+    <part name="parameters" element="tns:addEmployeeToDeptResponse"/>
+  </message>
+  <message name="getMyDepts">
+    <part name="parameters" element="tns:getMyDepts"/>
+  </message>
+  <message name="getMyDeptsResponse">
+    <part name="parameters" element="tns:getMyDeptsResponse"/>
+  </message>
+  <message name="getDeptInfo">
+    <part name="parameters" element="tns:getDeptInfo"/>
+  </message>
+  <message name="getDeptInfoResponse">
+    <part name="parameters" element="tns:getDeptInfoResponse"/>
+  </message>
+  <message name="setMyDepts">
+    <part name="parameters" element="tns:setMyDepts"/>
+  </message>
+  <message name="setMyDeptsResponse">
+    <part name="parameters" element="tns:setMyDeptsResponse"/>
+  </message>
+  <portType name="MyCompany">
+    <operation name="addEmployeeToDept">
+      <input wsam:Action="http://annotation/MyCompany/addEmployeeToDeptRequest" message="tns:addEmployeeToDept"/>
+      <output wsam:Action="http://annotation/MyCompany/addEmployeeToDeptResponse" message="tns:addEmployeeToDeptResponse"/>
+    </operation>
+    <operation name="getMyDepts">
+      <input wsam:Action="http://annotation/MyCompany/getMyDeptsRequest" message="tns:getMyDepts"/>
+      <output wsam:Action="http://annotation/MyCompany/getMyDeptsResponse" message="tns:getMyDeptsResponse"/>
+    </operation>
+    <operation name="getDeptInfo">
+      <input wsam:Action="http://annotation/MyCompany/getDeptInfoRequest" message="tns:getDeptInfo"/>
+      <output wsam:Action="http://annotation/MyCompany/getDeptInfoResponse" message="tns:getDeptInfoResponse"/>
+    </operation>
+    <operation name="setMyDepts">
+      <input wsam:Action="http://annotation/MyCompany/setMyDeptsRequest" message="tns:setMyDepts"/>
+      <output wsam:Action="http://annotation/MyCompany/setMyDeptsResponse" message="tns:setMyDeptsResponse"/>
+    </operation>
+  </portType>
+  <binding name="MyCompanyPortBinding" type="tns:MyCompany">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="addEmployeeToDept">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getMyDepts">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getDeptInfo">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="setMyDepts">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="MyCompanyWS">
+    <port name="MyCompanyPort" binding="tns:MyCompanyPortBinding">
+      <soap:address location="http://localhost:7101/WebService-Annotation-context-root/MyCompanyPort"/>
+    </port>
+  </service>
+</definitions>

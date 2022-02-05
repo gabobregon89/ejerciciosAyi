@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns1="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://annotation/" localpart="MyCompanyWS"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://annotation/" localpart="MyCompanyPort"/>
+         <runtime/>
+         <operations>
+            <operation name="addEmployeeToDept"/>
+            <operation name="getMyDepts"/>
+            <operation name="getDeptInfo"/>
+            <operation name="setMyDepts"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

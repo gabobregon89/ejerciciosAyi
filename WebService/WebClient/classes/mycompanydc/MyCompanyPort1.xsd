@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:ns0="http://annotation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://annotation/">
+  <xsd:complexType name="addEmployeeToDept">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:emp" minOccurs="0"/>
+      <xsd:element name="arg1" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="addEmployeeToDeptResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getDeptInfo">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getDeptInfoResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:dept" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getMyDepts"/>
+  <xsd:complexType name="getMyDeptsResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:dept" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="setMyDepts">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:dept" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="setMyDeptsResponse"/>
+  <xsd:complexType name="emp">
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:int"/>
+      <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="salary" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dept">
+    <xsd:sequence>
+      <xsd:element name="employees" type="ns0:emp" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+      <xsd:element name="id" type="xsd:int"/>
+      <xsd:element name="location" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="name" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="addEmployeeToDept" type="ns0:addEmployeeToDept"/>
+  <xsd:element name="addEmployeeToDeptResponse" type="ns0:addEmployeeToDeptResponse"/>
+  <xsd:element name="getDeptInfo" type="ns0:getDeptInfo"/>
+  <xsd:element name="getDeptInfoResponse" type="ns0:getDeptInfoResponse"/>
+  <xsd:element name="getMyDepts" type="ns0:getMyDepts"/>
+  <xsd:element name="getMyDeptsResponse" type="ns0:getMyDeptsResponse"/>
+  <xsd:element name="setMyDepts" type="ns0:setMyDepts"/>
+  <xsd:element name="setMyDeptsResponse" type="ns0:setMyDeptsResponse"/>
+</xsd:schema>

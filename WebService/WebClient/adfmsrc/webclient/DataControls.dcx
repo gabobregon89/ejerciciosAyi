@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.22.48" id="DataControls"
+                    Package="webclient">
+  <AdapterDataControl id="MyCompanyDC" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="webclient.MyCompanyDC"
+                      BeanClass="webclient.MyCompanyDC" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="MyCompanyDC" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  ensureKeyAttribute="true" useWSDLIdentity="true" dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="MyCompanyWS" namespace="http://annotation/" connection="MyCompanyDC">
+          <port name="MyCompanyPort">
+            <operation name="getDeptInfo"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>
