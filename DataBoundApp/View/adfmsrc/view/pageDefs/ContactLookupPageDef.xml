@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="ContactLookupPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="findContactsByName_name" IsQueriable="false"/>
+    </variableIterator>
+    <methodIterator Binds="findContactsByName.result" DataControl="AddressBook" RangeSize="25"
+                    BeanClass="acme.bean.Contact" id="findContactsByNameIterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="findContactsByName" RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="findContactsByName" IsViewObjectMethod="false" DataControl="AddressBook"
+                  InstanceName="bindings.findContactsByName.dataControl.dataProvider"
+                  ReturnName="data.AddressBook.methodResults.findContactsByName_findContactsByName_dataControl_dataProvider_findContactsByName_result">
+      <NamedData NDName="name" NDType="java.lang.String" NDValue="${bindings.findContactsByName_name}"/>
+    </methodAction>
+    <tree IterBinding="findContactsByNameIterator" id="Contact">
+      <nodeDefinition DefName="acme.bean.Contact" Name="Contact0">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="findContactsByNameIterator" id="Contact1">
+      <nodeDefinition DefName="acme.bean.Contact" Name="Contact10">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="variables" id="name">
+      <AttrNames>
+        <Item Value="findContactsByName_name"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

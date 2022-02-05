@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>LOCATIONS</name>
+  <columns>
+    <column>
+      <name>LOCATION_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column LOCATION_ID created as default primary key column</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>AREA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column AREA created from UML attribute &quot;area&quot; in UML class &quot;Location&quot;</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>COUNTRY</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">UML to Offline Database Transform: Column COUNTRY created from UML attribute &quot;country&quot; in UML class &quot;Location&quot;</value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>LOCATIONS_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>LOCATION_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LOCATIONS</name>
+            <schemaName>LOGICALMODEL</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>LOGICALMODEL</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>LOCATIONS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>LOCATIONS</name>
+          <schemaName>LOGICALMODEL</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>LOGICALMODEL</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>LOCATIONS_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>LOCATION_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>LOGICALMODEL</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">UML to Offline Database Transform: Table LOCATIONS created from UML class &quot;Location&quot;
+UML to Offline Database Transform: Primary key constraint LOCATIONS_PK created by default</value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>LOGICALMODEL</name>
+  </schema>
+</table>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.4.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:48915480-a755-41fb-b6e0-da1b5cc7937d'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Location'
+   visibility='public'>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:56d9c925-d3e3-426a-a669-9c48681a17f7'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='area'
+    aggregation='none'
+    visibility='package'>
+   <type href='urn:uuid:fcb0d13c-0275-4c69-bfeb-854450f5d2d6'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:1e274623-6ae9-4497-bc10-d53244283f43'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:3266ad11-250d-4834-a4c1-c6787e3e32ef'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:3b577096-e892-4a25-9d35-eebeeab51c94'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='country'
+    aggregation='none'
+    visibility='package'>
+   <type href='urn:uuid:fcb0d13c-0275-4c69-bfeb-854450f5d2d6'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:59bb4d6b-0ff1-4a00-84cd-942fdd80ce69'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:8db59433-6472-4501-a6e8-1d7adfdfaefa'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>

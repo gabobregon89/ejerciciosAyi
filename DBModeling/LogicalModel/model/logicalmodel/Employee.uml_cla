@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.4.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:686e6a2e-8332-401f-a5d5-e5ddd211f0da'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Employee'
+   visibility='public'>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:3c1057fa-482e-4e49-abf2-4c821bdff323'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='empno'
+    aggregation='none'
+    visibility='package'>
+   <type href='urn:uuid:f2b13bd9-6545-428a-848f-a99f4851840b'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:1b40e1a1-19ba-4aa7-86ba-a8495bdf2d7d'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:0ff8bdf1-7215-4e4b-a25b-77905f39d188'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:d345fc73-85ef-4821-800c-69dff7363aea'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='name'
+    aggregation='none'
+    visibility='package'>
+   <type href='http://www.omg.org/spec/UML/20131001/PrimitiveTypes.xmi#String'/>
+   <lowerValue xmi:type='uml:LiteralInteger' xmi:uuid='urn:uuid:17291efb-08ea-422d-92e8-6fe478d876cb'
+     value='1'
+     visibility='public'/>
+   <upperValue xmi:type='uml:LiteralUnlimitedNatural' xmi:uuid='urn:uuid:e03c1233-0fbe-4c76-b24e-dca625448746'
+     value='1'
+     visibility='public'/>
+  </ownedAttribute>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:212af0ef-b907-46f0-a319-5f83a26120de'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    name='salary'
+    aggregation='none'
+    visibility='package'>
+   <type href='urn:uuid:f2b13bd9-6545-428a-848f-a99f4851840b'/>
+  </ownedAttribute>
+ </uml:Class>
+</xmi:XMI>
